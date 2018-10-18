@@ -1,0 +1,15 @@
+button {
+  margin: 0 auto;
+  display: block;
+}
+.card-img-top {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+.score {
+  position: relative;
+  left: 40%;
+  bottom: 125px;
+  color: white;
+}

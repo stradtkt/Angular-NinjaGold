@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-12">
+      <div class="card p-3 mt-5 shadow-lg">
+        <img src="../../../assets/img/score-1.png" class="score-image m-auto" alt="" width="600px" height="200px">
+        <h1 class="score">GOLD {{goldService.sum}}</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card shadow-lg p-2 mt-5">
+        <img src="../../../assets/img/farm.png" alt="Farm House" class=card-img-top>
+        <div class="card-body" name="farm">
+          <h3 class="text-center">Farm</h3>
+          <button (click)="GetGold('Farm', 2, 5)" class="btn btn-primary rounded">Farm</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card shadow-lg p-2 mt-5">
+        <img src="../../../assets/img/cave.png" alt="Cave" class=card-img-top>
+        <div class="card-body" name="cave">
+          <h3 class="text-center">Cave</h3>
+          <button (click)="GetGold('Cave', 5, 10)" class="btn btn-primary rounded">Cave</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card shadow-lg p-2 mt-5">
+        <img src="../../../assets/img/casino.png" alt="Casino" class=card-img-top>
+        <div class="card-body" name="casino">
+          <h3 class="text-center">Casino</h3>
+          <button (click)="GetGold('Casino', -100, 100)" class="btn btn-primary rounded m-auto">Casino</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card shadow-lg p-2 mt-5">
+        <img src="../../../assets/img/house.png" alt="House" class=card-img-top>
+        <div class="card-body" name="house">
+          <h3 class="text-center">House</h3>
+          <button (click)="GetGold('House', 7, 15)" class="btn btn-primary rounded">House</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row mt-5 mb-5">
+    <div class="col-md-6 offset-3 mb-5">
+      <div class="card p-3 mt-5 shadow-lg">
+        <ul>
+          <li *ngFor="let message of goldService.messages">
+            {{message}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
